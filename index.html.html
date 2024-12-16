@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Cloud Solutions</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: #ff6347;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .note-card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            animation: slideUp 1.5s ease-in-out;
+            text-align: center;
+        }
+
+        .note-card:hover {
+            transform: scale(1.05);
+        }
+
+        .note-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .note-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .note-card p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .note-card .price {
+            font-size: 1.5rem;
+            color: #ff6347;
+            font-weight: bold;
+        }
+
+        .contact-btn {
+            background-color: #008cba;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .contact-btn:hover {
+            background-color: #007bb5;
+        }
+
+        .subscribe-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .subscribe-box input {
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        .subscribe-box button {
+            padding: 12px 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .subscribe-box button:hover {
+            background-color: #e55347;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .note-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .note-card p {
+                font-size: 1rem;
+            }
+
+            .subscribe-box input, .subscribe-box button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DevOps Cloud Solutions Title -->
+    <h2>DevOps Cloud Solutions</h2>
+
+    <h1>Practical and Hands-On Experience Notes with Guidance</h1>
+
+    <!-- Notes dashboard -->
+    <div class="dashboard">
+
+        <div class="note-card">
+            <img src="photos/helm.webp" alt="Helm Notes">
+            <h3>Mastering Helm Charts</h3>
+            <p>Unlock the power of Helm for efficient Kubernetes package management.</p>
+            <p class="price">$5.50</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+        
+        <div class="note-card">
+            <img src="photos/ingress.webp" alt="Ingress Notes">
+            <h3>Ingress Deep Dive</h3>
+            <p>Learn advanced Ingress concepts for seamless Kubernetes traffic management.</p>
+            <p class="price">$7.99</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+        
+        <div class="note-card">
+            <img src="photos/security.webp" alt="Checkov Notes">
+            <h3>Checkov for Security</h3>
+            <p>Discover infrastructure as code (IaC) security with Checkov's best practices.</p>
+            <p class="price">$3.50</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+        
+        <div class="note-card">
+            <img src="photos/Kubernetes.webp" alt="Kubernetes Notes">
+            <h3>Kubernetes Essentials</h3>
+            <p>Master Kubernetes with comprehensive notes on pods, services, deployments, and more.</p>
+            <p class="price">$10.99</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+        
+        <div class="note-card">
+            <img src="photos/project-image.png" alt="CI/CD Pipeline">
+            <h3>Production CI/CD Pipeline</h3>
+            <p>Build robust, production-level CI/CD pipelines with hands-on project examples.</p>
+            <p class="price">$20</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+
+        <div class="note-card">
+            <img src="photos/LINUX-OS.jpg" alt="Linux Notes">
+            <h3>Linux Essentials</h3>
+            <p>Dive into Linux fundamentals with detailed explanations and practical examples.</p>
+            <p class="price">$5.99</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+        
+        <div class="note-card">
+            <img src="photos/aws.jpeg" alt="AWS Notes">
+            <h3>AWS Interview Guide</h3>
+            <p>Prepare for AWS interviews with expert-curated questions and in-depth answers.</p>
+            <p class="price">$3.99</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+        
+        <div class="note-card">
+            <img src="photos/shell_scripting.jpeg" alt="Shell Scripting Guide">
+            <h3>Shell Scripting Mastery</h3>
+            <p>Enhance your scripting skills with a comprehensive guide to shell scripting.</p>
+            <p class="price">$9.99</p>
+            <button onclick="unlockNotes()">Unlock Notes</button>
+        </div>
+        
+        
+    </div>
+
+    <!-- Subscribe Now Section -->
+    <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email to subscribe">
+        <button onclick="subscribeNow()">Subscribe Now</button>
+    </div>
+
+    <!-- Contact button -->
+    <button class="contact-btn" onclick="redirectToContactPage()">Contact Me</button>
+
+    <!-- Copyright Section -->
+    <div class="copyright">
+        <p>© 2024 TechCloud Solutions. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function unlockNotes() {
+            // Redirecting to the contact form page to unlock the notes
+            window.location.href = 'contact.html';
+        }
+
+        function redirectToContactPage() {
+            // Redirecting to the contact page
+            window.location.href = 'contact.html';
+        }
+
+        function subscribeNow() {
+            // Placeholder action for subscription
+            alert('Thank you for subscribing! We will be in touch soon.');
+        }
+    </script>
+</body>
+</html>
